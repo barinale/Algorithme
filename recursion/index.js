@@ -1,12 +1,18 @@
 //*************************** */
 // fibonacci
-// let fibonacci = (num)=>{
-//     if(num==1 || num==0)
-//         return num
+let Memo = [];
+let fibonacci = (num)=>{
+    if(num==1 || num==0)
+        return num
+    if(Memo[num])
+    {
+        return Memo[num]
+    }
+    Memo[num] = fibonacci(num-1) + fibonacci(num-2)
+    return Memo[num]
 
-//     return fibonacci(num-1) + fibonacci(num-2)
-// }
-// console.log(fibonacci(10))
+}
+console.log(fibonacci(10))
 //*************************** */
 
 //Binary Search
